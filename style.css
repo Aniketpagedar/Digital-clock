@@ -1,0 +1,183 @@
+* {
+    margin: 0 auto;
+    padding: 30px;
+    
+}
+
+body {
+    background-color: #151515;
+    padding: 40px;
+}
+
+.Dclock {
+    padding: 50px;
+    justify-content: center;
+    text-align: center;
+    color: blue;
+    height: 27px;
+    width: 54px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 25px;
+}
+
+.neonText {
+    animation: flicker inherit alternate;
+    color: blue;
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100%,
+    150% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #0fa,
+            0 0 80px #0fa,
+            0 0 90px #0fa,
+            0 0 100px #0fa,
+            0 0 150px #0fa;
+
+
+    }
+
+
+    20%,
+    24%,
+    55%,
+    62%,
+    75% {
+        text-shadow: blue;
+
+
+    }
+}
+
+
+.neonText:hover {
+    color: blue;
+    text-shadow: #00FFEF;
+    text-shadow: #007FFF;
+
+
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+
+
+}
+
+.h1 {
+    
+
+    animation: glow   1s ease-in-out infinite alternate;
+    color: #fff;
+
+    
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+
+    
+}
+
+h1:hover{
+ height: 25px;
+ color: #0073e6;
+}
+
+@keyframes glow {
+    from {
+      /*
+        Identity matrix is used as basis here.
+        The matrix below describes the
+        following transformations:
+          Translates every X point by -50px
+          Translates every Y point by -100px
+          Translates every Z point by 0
+          Scales down by 10%
+      */
+      transform: matrix3d(
+        1,0,0,0,
+        0,1,0,0,
+        0,0,1,0,
+        -50,-100,0,1.1
+      );
+  
+  
+    }
+    50% {
+      transform: matrix3d(
+        1,0,0,0,
+        0,1,0,0,
+        0,0,1,0,
+        0,0,0,0.9
+      );
+    }
+    to {
+       transform: matrix3d(
+        1,0,0,0,
+        0,1,0,0,
+        0,0,1,0,
+        50,100,0,1.1
+      )
+    }
+  }
+ 
+
+
+.Border {
+    padding: 60px;
+    font-size: 50px;
+
+    align-items: center;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+
+}
+
+.circle {
+    position: relative;
+    margin: auto;
+    padding: 70px;
+    justify-content: center;
+    top: calc(50% - 200px);
+    left: calc(50% -200px);
+    width: 720px;
+    height: 360px;
+    border: 50px solid white;
+    background-color: #fff;
+    border-radius: 25000vh;
+
+
+    box-shadow:
+        0 0 60px 30px #fff,
+        0 0 100px 60px #f0f,
+        0 0 140px 90px #0ff;
+
+
+}
